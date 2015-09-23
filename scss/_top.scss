@@ -1,0 +1,44 @@
+.top {
+	min-height: 55px;
+	background: #20201f;
+	box-shadow: 0 0 1px 1px #20201f;
+
+	&__logo {
+		background: url(../img/logo.png) no-repeat center center;
+		background-size: 61px 61px;
+		width: 61px;
+		height: 61px;
+		position: absolute;
+		left: 0;
+		top: 5px;
+		z-index: 3;
+		transition: all 0.5s;
+
+		&:hover {
+			transform: rotate(360deg);
+		}
+
+		&:hover + .top__logo-text {
+			transform: translateX(65px);
+			opacity: 1;
+		}
+	}
+
+	&__logo-text {
+		color: #fcdbdc;
+		font-family: Ubuntu;
+		font-weight: 500;
+		font-size: 22px;
+		position: absolute;
+		z-index: 2;
+		top: 18px;
+		transition: all 0.5s;
+		left: 0;
+		opacity: 0;
+	}
+}
+.wrap {
+	max-width: $wrap-width;
+	margin: 0 auto;
+	position: relative;			
+}
