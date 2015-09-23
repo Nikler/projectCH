@@ -1,7 +1,8 @@
 .top {
 	min-height: 55px;
 	background: #20201f;
-	box-shadow: 0 0 1px 1px #20201f;
+	box-shadow: 0 0 1px 1px #20201f,
+              inset 0 -25px 35px 2px rgba(0, 0, 0 ,0.25);;
 
 	&__logo {
 		background: url(../img/logo.png) no-repeat center center;
@@ -13,6 +14,7 @@
 		top: 5px;
 		z-index: 3;
 		transition: all 0.5s;
+    border-radius: 50%;
 
 		&:hover {
 			transform: rotate(360deg);
@@ -20,12 +22,13 @@
 
 		&:hover + .top__logo-text {
 			transform: translateX(65px);
-			opacity: 1;
+			visibility: visible;
+      color: #fcdbdc;
 		}
 	}
 
 	&__logo-text {
-		color: #fcdbdc;
+		color: #20201f;
 		font-family: Ubuntu;
 		font-weight: 500;
 		font-size: 22px;
@@ -34,12 +37,43 @@
 		top: 18px;
 		transition: all 0.5s;
 		left: 0;
-		opacity: 0;
+		visibility: hidden;
 	}
 }
 .wrap {
 	max-width: $wrap-width;
 	margin: 0 auto;
 	position: relative;			
+}
+
+.nav-top {
+  float: right;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+  }
+
+  &__item {
+    display: inline-block;
+
+  }
+
+  &__link {
+    display: block;
+    line-height: 55px;
+    padding: 0 25px;
+    text-decoration: none;
+    color: darken(#fcdbdc, 5%);
+    font-family: ubuntu;
+    font-weight: 400;
+    font-size: 14px;
+/*    text-shadow: 0 0 24px rgba(0, 0, 0 ,0.6);*/
+
+    &--active {
+      background: #cb4545;
+      box-shadow: inset 0 -25px 35px 2px rgba(0, 0, 0 ,0.35);
+    }
+  }
 }
 
