@@ -2,3 +2,14 @@
 @import 'var';
 @import 'settings';
 @import 'top';
+@import 'slider';
+
+.clearfix:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+body {
+	min-width: 1200px;
+}
